@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(images/computer.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-container {
+    margin-right: 0;
+    height: 100vh;
+    background-color: rgb(39, 39, 39);
+    outline: 1px solid rgb(90, 90, 90);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+@media (min-width: 1024px) {
+.login-container {
+margin-right: 50%;
+}
+}
+.title-container {
+color: rgb(240, 240, 240);
+align-items: left;
+margin-bottom: 40px;
+}
+
+.form-container {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.bus-name {
+    color: #62a9d1;
+}
+
+.login-subtitle {
+    color: rgb(187, 187, 187);
+    font-size: 1.2em;
+}
+  
+#password, #email, #username, #submit {
+    width: 500px
+}
+
+@media (max-width: 550px) {
+#password, #email, #username, #submit {
+    width: 400px
+}
+}
+
+.field-container {
+    position: relative;
+    margin-bottom: 2.2em;
+}
+
+label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1em;
+    color:  rgb(90, 90, 90);
+    display: flex;
+    align-items: center;
+    left: 15px;
+    transition: .15s ease-in-out;
+}
+
+input, label{
+    font-size: 1em;
+    width: 100%;
+    height: 55px;
+}
+input:hover + label{
+    cursor: text;
+}
+
+input:focus + label {
+    color: rgb(255, 255, 255);
+    font-size: .9em;
+    top: -45px;
+    pointer-events: none;
+}
+
+input:not(:placeholder-shown) + label {
+    color: rgb(255, 255, 255);
+    font-size: .9em;
+    top: -45px;
+    pointer-events: none;
+}
+
+input:focus {
+ box-shadow: 0px 0px 20px #2e8fff;
+}
+
+.submit {
+    background-color: #62a9d1;
+    color: white;
+    font-size: 1em;
+}
+
+.logo-home-button {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.logo-home-button img {
+    width: 50px;
+}
+
+#errors {
+    color: rgb(255, 255, 255);
+    
+}
+
+#errors li::marker {
+    color: rgb(255, 0, 0);
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: -30px;
+    left: -50px;
+  }
+  
+  /* #message p {
+  } */
+  
+  #message h3 {
+    font-size: 20px;
+    color: #62a9d1;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: rgb(38, 160, 38);
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+  }
+  
+  /* Add a red text color and an "x" icon when the requirements are wrong */
+  .invalid {
+    color: rgb(255, 255, 255);
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+  }
